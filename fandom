@@ -1,6 +1,6 @@
 var readlineSync = require("readline-sync");
 var score = 0;
-covnsole.log("HEY!!WELCOME TO HARRY POTTER QUIZ\n");
+console.log("HEY!!WELCOME TO HARRY POTTER QUIZ\n");
 var userName = readlineSync.question("WHAT IS YOUR NAME?\n");
 console.log("WELCOME!!\n" + userName + "\nLET'S SEE!...ARE YOU TRUE HARRY POTTER FAN??\n");
 
