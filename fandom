@@ -1,0 +1,33 @@
+var readlineSync = require("readline-sync");
+var score = 0;
+covnsole.log("HEY!!WELCOME TO HARRY POTTER QUIZ\n");
+var userName = readlineSync.question("WHAT IS YOUR NAME?\n");
+console.log("WELCOME!!\n" + userName + "\nLET'S SEE!...ARE YOU TRUE HARRY POTTER FAN??\n");
+
+function play(question,answer){
+  var userAnswer = readlineSync.question(question);
+  if (userAnswer===answer){
+    console.log("YOU ARE RIGHT!!");
+    score = score + 1
+  }
+  else{console.log("YOU ARE INCORRECT!!")}
+  console.log("YOUR SCORE : " + score + "/4");
+  console.log("-----------------------------")
+}
+var question =[{question:"IN WHICH HOUSE WAS HARRY?\n a]Slytherin b]Hufflepuff c]Griffindor\n",
+ answer : "c"},
+               {question:"ANOTHER NAME OF LORD VOLDEMORT?\n a]Ron Weasly b]Tom Riddle c]Peter Pettigerew\n",
+               answer : "b"},
+  {question:"WHAT DOES HARRY ACCIDENTALLY DO WHEN HE GOES TO THE ZOO?\n a]Teaches the monkey sings b]Make the glass in the snake enclosure disappear c]Tuns a flamingo blue\n",
+ answer : "b"},
+               {question:"WHAT'S HARRY'S MUM LILY'S SURNAME BEFORE SHE MARRIES HARRY'S DAD?\n a]Peters b]Collins c]Evans\n",
+               answer : "c"},             
+  
+];
+for (var i=0; i<question.length; i++){
+  var currentQuestion = question[i];
+  play(currentQuestion.question,
+      currentQuestion.answer)
+}
+console.log("Your Total Score : " + score + "/4\n");
+console.log("Thanks for taking part in this quiz")
